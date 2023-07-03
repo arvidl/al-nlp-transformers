@@ -1,6 +1,6 @@
 import pandas as pd
 
-GITHUB_PATH_PREFIX = "nlp-with-transformers/notebooks/blob/main/"
+GITHUB_PATH_PREFIX = "nlp-with-transformers/al-nlp-transformers/blob/main/"
 
 CHAPTER_TO_NB = {
     "Introduction": "01_introduction",
