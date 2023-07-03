@@ -1,0 +1,16 @@
+
+# conda create -n nlp_arvid python=3.10 pytorch torchvision torchaudio pytorch-cuda=11.8 pytorch-scatter -c pytorch -c nvidia -c pyg
+# conda activate nlp_arvid
+# conda install notebook ipykernel ipywidgets git-lfs libsndfile -c conda-forge
+# pip install -r requirements.txt
+# %pip install tensorrt
+
+
+# conda deactivate
+# conda env remove -n nlp_arvid
+#  ...
+#   - cudatoolkit=11.8
+# ...
+# conda env update-f environment_nlp_arvid.yml
+# canda activate nlp_arvid
+# conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia

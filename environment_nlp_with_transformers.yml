@@ -1,0 +1,63 @@
+name: nlp_with_transformers
+channels:
+  - pytorch
+  - defaults
+  - pyg
+  - conda-forge
+dependencies:
+  - python=3.9
+#  - cudatoolkit=11.3
+  - cudatoolkit=11.8
+  - pytorch-scatter
+  - pip
+  - notebook
+  - ipykernel
+  - ipywidgets
+  - git-lfs
+  - libsndfile
+  - pip:
+      - -r requirements.txt
+
+
+conda create --name nlp_with_transformers python=3.10
+conda activate nlp_with_transformers
+pip install --upgrade openai
+#pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu122 -U
+pip install torch torchvision torchaudio
+pip install openai[embeddings]    # On MacOS with zsh: pip install openai\[embeddings\]
+pip install openai[wandb]
+pip install openai[datalib]
+pip install ipython
+pip install ipykernel
+pip install python-dotenv
+conda install pytorch-scatter -c pyg
+pip install transformers[tf,torch,sentencepiece,vision,optuna,sklearn,onnxruntime]==4.16.2
+pip install datasets[audio]==1.16.1
+pip install matplotlib
+pip install ipywidgets
+pip install umap-learn==0.5.1
+pip install bertviz==1.2.0
+pip install seqeval==1.2.2
+pip install nltk==3.6.6
+pip install sacrebleu==1.5.1
+pip install rouge-score==0.0.4
+pip install py7zr # Needed for samsum dataset
+pip install nlpaug==1.1.7
+pip install scikit-multilearn==0.2.0
+pip install psutil
+pip install accelerate==0.5.1
+pip install git-lfs
+#pip install pysndfile
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+conda install -c conda-forge libsndfile
+
+
+
+# conda deactivate
+# conda env remove -n nlp_with_transformers
+#  ...
+#   - cudatoolkit=11.8
+# ...
+# conda env create -f environment_nlp_with_transformers.yml
+# canda activate nlp_with_transformers
+# conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
